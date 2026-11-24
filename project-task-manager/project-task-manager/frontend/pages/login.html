@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyçu – Menaxhimi i projekteve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="auth-box">
+    <h1>Menaxhimi i projekteve dhe detyrave</h1>
+    <p class="muted">Organizo punën e ekipit në një vend të vetëm.</p>
+
+    <div class="tabs" role="tablist">
+      <button type="button" id="tab-login" class="tab active" role="tab" aria-selected="true">Kyçu</button>
+      <button type="button" id="tab-register" class="tab" role="tab" aria-selected="false">Regjistrohu</button>
+    </div>
+
+    <form id="login-form" class="panel" novalidate>
+      <div id="login-message" class="message" hidden></div>
+      <div class="field">
+        <label for="login-email">Email</label>
+        <input id="login-email" type="email" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="login-password">Fjalëkalimi</label>
+        <input id="login-password" type="password" autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn">Kyçu</button>
+    </form>
+
+    <form id="register-form" class="panel" hidden novalidate>
+      <div id="register-message" class="message" hidden></div>
+      <div class="field">
+        <label for="register-name">Emri i plotë</label>
+        <input id="register-name" type="text" maxlength="100" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="register-email">Email</label>
+        <input id="register-email" type="email" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="register-password">Fjalëkalimi (të paktën 8 karaktere)</label>
+        <input id="register-password" type="password" autocomplete="new-password">
+      </div>
+      <button type="submit" class="btn">Krijo llogari</button>
+    </form>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>

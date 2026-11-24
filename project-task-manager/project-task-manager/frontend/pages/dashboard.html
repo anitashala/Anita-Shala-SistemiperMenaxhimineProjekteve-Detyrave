@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard – Menaxhimi i projekteve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">Menaxhimi i projekteve</span>
+    <nav>
+      <a href="projects.html">Projektet</a>
+      <a href="dashboard.html">Dashboard</a>
+      <button type="button" id="logout-btn" class="btn btn-light btn-small">Dil</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-head"><h1>Dashboard</h1></div>
+
+    <div id="dashboard-state" class="state" hidden></div>
+
+    <div id="dashboard-content" hidden>
+      <div class="stats">
+        <div class="stat" data-status="TODO">
+          <div class="stat-number" id="count-TODO">0</div>
+          <div class="muted">Për t’u bërë</div>
+        </div>
+        <div class="stat" data-status="IN_PROGRESS">
+          <div class="stat-number" id="count-IN_PROGRESS">0</div>
+          <div class="muted">Në progres</div>
+        </div>
+        <div class="stat" data-status="DONE">
+          <div class="stat-number" id="count-DONE">0</div>
+          <div class="muted">Të përfunduara</div>
+        </div>
+      </div>
+
+      <section class="panel">
+        <h2>Detyrat e mia</h2>
+        <ul id="my-tasks" class="list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Skadojnë brenda 7 ditëve</h2>
+        <ul id="due-soon" class="list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projektet – Menaxhimi i projekteve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">Menaxhimi i projekteve</span>
+    <nav>
+      <a href="projects.html">Projektet</a>
+      <a href="dashboard.html">Dashboard</a>
+      <button type="button" id="logout-btn" class="btn btn-light btn-small">Dil</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-head"><h1>Projektet e mia</h1></div>
+
+    <form id="project-form" class="panel" novalidate>
+      <h2>Projekt i ri</h2>
+      <div id="project-message" class="message" hidden></div>
+      <div class="field">
+        <label for="project-name">Emri i projektit</label>
+        <input id="project-name" type="text" maxlength="120">
+      </div>
+      <div class="field">
+        <label for="project-description">Përshkrimi (opsional)</label>
+        <textarea id="project-description"></textarea>
+      </div>
+      <div class="field">
+        <label for="project-deadline">Afati (opsional)</label>
+        <input id="project-deadline" type="date">
+      </div>
+      <button type="submit" class="btn">Krijo projektin</button>
+    </form>
+
+    <div id="projects-state" class="state" hidden></div>
+    <div id="projects-list" class="cards"></div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/projects.js"></script>
+</body>
+</html>

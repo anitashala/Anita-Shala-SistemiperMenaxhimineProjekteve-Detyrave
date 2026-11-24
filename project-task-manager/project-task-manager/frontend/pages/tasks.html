@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detyrat – Menaxhimi i projekteve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">Menaxhimi i projekteve</span>
+    <nav>
+      <a href="projects.html">Projektet</a>
+      <a href="dashboard.html">Dashboard</a>
+      <button type="button" id="logout-btn" class="btn btn-light btn-small">Dil</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <p><a href="projects.html">← Kthehu te projektet</a></p>
+      <h1 id="project-title">Duke ngarkuar…</h1>
+      <p id="project-description" class="muted"></p>
+    </div>
+
+    <section class="panel">
+      <h2>Anëtarët</h2>
+      <div id="members-state" class="state" hidden></div>
+      <ul id="members-list" class="list"></ul>
+      <form id="member-form" hidden novalidate>
+        <div id="member-message" class="message" hidden></div>
+        <div class="field">
+          <label for="member-email">Shto anëtar me email</label>
+          <input id="member-email" type="email" placeholder="emri@shembull.com">
+        </div>
+        <button type="submit" class="btn btn-small">Shto anëtarin</button>
+      </form>
+    </section>
+
+    <form id="task-form" class="panel" novalidate>
+      <h2>Detyrë e re</h2>
+      <div id="task-message" class="message" hidden></div>
+      <div class="field">
+        <label for="task-title">Titulli</label>
+        <input id="task-title" type="text" maxlength="150">
+      </div>
+      <div class="field">
+        <label for="task-description">Përshkrimi (opsional)</label>
+        <textarea id="task-description"></textarea>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="task-priority">Prioriteti</label>
+          <select id="task-priority">
+            <option value="LOW">E ulët</option>
+            <option value="MEDIUM" selected>Mesatare</option>
+            <option value="HIGH">E lartë</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="task-deadline">Afati (opsional)</label>
+          <input id="task-deadline" type="date">
+        </div>
+      </div>
+      <div class="field">
+        <label for="task-assignee">Përgjegjësi</label>
+        <select id="task-assignee"><option value="">Pa caktuar</option></select>
+      </div>
+      <button type="submit" class="btn">Krijo detyrën</button>
+    </form>
+
+    <h2>Detyrat</h2>
+    <div id="tasks-state" class="state" hidden></div>
+    <div id="tasks-list"></div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/tasks.js"></script>
+</body>
+</html>
